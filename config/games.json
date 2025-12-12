@@ -110,6 +110,11 @@
     "title": "Canyon Defense"
   },
   {
+    "link": "projects/caardrawing/index.html",
+    "imgSrc": "projects/cardrawing/splash.png",
+    "title": "Car Drawing game"
+  },
+  {
     "link": "projects/cell-machine/index.html",
     "imgSrc": "projects/cell-machine/img/te9nDu.png",
     "title": "Cell Machine"
