@@ -30,6 +30,11 @@
     "title": "Adrenaline Challenge"
   },
   {
+    "link": "projects/agario/index.html",
+    "imgSrc": "projects/agario/agario.png",
+    "title": "Agar.io"
+  },
+  {
     "link": "projects/angrybirdsspace/index.html",
     "imgSrc": "projects/angrybirdsspace/abs.webp",
     "title": "Angry birds space"
@@ -64,6 +69,11 @@
     "imgSrc": "projects/battleforgondor/3557.jpg",
     "title": "Battle for Gondor"
   },
+   {
+    "link": "projects/bitlife/index.html",
+    "imgSrc": "projects/bitlife/.png",
+    "title": "Bitlife"
+  },
   {
     "link": "projects/bigredbutton/index.html",
     "imgSrc": "projects/bigredbutton/bigredbutton.png",
@@ -83,6 +93,11 @@
     "link": "projects/bloonstd2/index.html",
     "imgSrc": "projects/bloonstd2/bloonstd2.png",
     "title": "Bloons TD 2"
+  },
+  {
+    "link": "projects/blockblast/index.html",
+    "imgSrc": "projects/blockblast/blockblast.webp",
+    "title": "Block blast"
   },
   {
     "link": "projects/bloxors/index.html",
@@ -128,6 +143,11 @@
     "link": "projects/cardrawing/index.html",
     "imgSrc": "projects/cardrawing/splash.png",
     "title": "Car Drawing game"
+  },
+  {
+    "link": "projects/catmario/index.html",
+    "imgSrc": "projects/catmario/catmario.jpg",
+    "title": "Cat mario game"
   },
   {
     "link": "projects/cell-machine/index.html",
@@ -335,6 +355,11 @@
     "title": "Flash Tetris"
   },
   {
+    "link": "projects/funnyshooter/index.html",
+    "imgSrc": "projects/funnyshooter/fs2.png",
+    "title": "Funny shooter 2"
+  },
+  {
     "link": "projects/game-inside/index.html",
     "imgSrc": "projects/game-inside/img/display.png",
     "title": "Game Inside a Game Inside a Game..."
@@ -405,6 +430,11 @@
     "title": "Hextris"
   },
   {
+    "link": "projects/clicypurplehead/index.html",
+    "imgSrc": "projects/clicypurplehead/iph.jpeg",
+    "title": "Icy purple head"
+  },
+  {
     "link": "projects/idle-breakout/index.html",
     "imgSrc": "projects/idle-breakout/img/thumbnail.png",
     "title": "Idle Breakout"
@@ -470,6 +500,11 @@
     "title": "Matrix Rampage"
   },
   {
+    "link": "projects/melonplayground/index.html",
+    "imgSrc": "projects/melonplayground/melonplayground.png",
+    "title": "Melon playground"
+  },
+  {
     "link": "projects/meme2048/index.html",
     "imgSrc": "projects/meme2048/img/rickroll.gif",
     "title": "Meme 2048"
@@ -529,6 +564,11 @@
     "link": "projects/motox3m-winter/index.html",
     "imgSrc": "projects/motox3m-winter/download.jpeg",
     "title": "MotoX3M Winter"
+  },
+  {
+    "link": "projects/mrracer/index.html",
+    "imgSrc": "projects/mrracer/mrracer.pngT",
+    "title": "Mr Racer"
   },
   {
     "link": "projects/n-gon/index.html",
@@ -769,6 +809,11 @@
     "link": "projects/tombofthemask/index.html",
     "imgSrc": "projects/tombofthemask/totm.png",
     "title": "Tomb of the mask"
+  },
+  {
+    "link": "projects/topspeedracing/index.html",
+    "imgSrc": "projects/topspeedracing/top-speed-3d.jpg",
+    "title": "Top speed racing 3d"
   },
   {
     "link": "projects/tosstheturtle/index.html",
