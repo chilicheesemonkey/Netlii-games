@@ -20,7 +20,7 @@ function getRandomGreeting() {
     "Do you bite your ice cream?",
     "#Relatable",
     "chinese grandpa vs the evil bees in the hibiscus",
-    "You got games on your phone?",
+    "You got bees on your phone?",
     "Powered by hamsters!",
     "*insert cool explosion*",
     "Got to go fast!",
