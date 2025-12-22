@@ -460,6 +460,11 @@
     "title": "Impossible Quiz"
   },
   {
+    "link": "projects/infiltratingtheairship/index.html",
+    "imgSrc": "projects/infiltratingtheairship/images.webp",
+    "title": "Infiltrating the airship"
+  },
+  {
     "link": "projects/interactivebuddy/index.html",
     "imgSrc": "projects/interactivebuddy/interactivebuddy.jpg",
     "title": "Interactive Buddy"
