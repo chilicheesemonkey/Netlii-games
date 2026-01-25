@@ -248,7 +248,7 @@ async function addTab(link) {
   focusTab(tab);
 }
 
-addTab("0k3a.dpdns.org/movies");
+addTab("abc123math.onrender.com/movies");
 
 const urlParams = new URLSearchParams(window.location.search);
 
