@@ -290,11 +290,6 @@
     "title": "Double Wires"
   },
   {
-    "link": "projects/offline/download.html",
-    "imgSrc": "projects/offline/download.png",
-    "title": "Download 0K3A for chrome"
-  },
-  {
     "link": "projects/draw-the-hill/index.html",
     "imgSrc": "projects/draw-the-hill/icons/icon-512.png",
     "title": "Draw the Hill"
