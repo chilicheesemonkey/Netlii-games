@@ -116,17 +116,22 @@ html, body {
             margin: 0;
         }
 
-        /* BOTTOM DOCK (From Sketch) */
-        .bottom-nav {
-            margin-top: auto;
-            margin-bottom: 30px;
-            display: flex;
-            gap: 40px;
-            background: rgba(0, 0, 0, 0.05);
-            padding: 15px 40px;
-            border-radius: 50px;
-            backdrop-filter: blur(10px);
-        }
+.bottom-nav {
+    position: fixed; /* Keeps it on screen while scrolling */
+    bottom: 30px;    /* Distance from the bottom edge */
+    left: 50%;
+    transform: translateX(-50%); /* Centers the dock horizontally */
+    display: flex;
+    gap: 40px;
+    background: rgba(255, 255, 255, 0.4); /* Glass effect */
+    padding: 15px 40px;
+    border-radius: 50px;
+    backdrop-filter: blur(15px); /* Blurs content behind the dock */
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensures it stays on top of game tiles */
+}
 
         .nav-item {
             text-decoration: none;
