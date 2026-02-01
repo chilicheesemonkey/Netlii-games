@@ -248,42 +248,21 @@ async function addTab(link) {
   focusTab(tab);
 }
 
-addTab("html.duckduckgo.com/html");
+/* --- Replace the bottom of tabs.mjs with this --- */
 
 const urlParams = new URLSearchParams(window.location.search);
+const pendingSearch = localStorage.getItem('autoSearchQuery');
 
-if (urlParams.has("inject")) {
-  let tab = {};
+if (pendingSearch) {
+  // 1. Clear the storage so it doesn't repeat on refresh
+  localStorage.removeItem('autoSearchQuery');
+  
+  // 2. Immediately trigger the tab with the search query
+  addTab(pendingSearch);
+} else if (urlParams.has("inject")) {
   const injection = urlParams.get("inject");
-
-  setTimeout(() => {
-    addTab(injection)
-    focusTab()
-  }, 100);
+  addTab(injection);
+} else {
+  // Default page if no search is pending
+  addTab("html.duckduckgo.com/html");
 }
-/* --- ADD THIS TO THE BOTTOM OF tabs.mjs --- */
-
-// Function to check for and execute a pending search from home.html
-function checkPendingSearch() {
-  const pendingSearch = localStorage.getItem('autoSearchQuery');
-
-  if (pendingSearch) {
-    // 1. Immediately clear it so it doesn't loop on refresh
-    localStorage.removeItem('autoSearchQuery');
-
-    // 2. Call the internal addTab function directly
-    // This uses your existing proxy search logic
-    addTab(pendingSearch);
-
-    // 3. Sync the URL bar text visually
-    if (urlInput) {
-      urlInput.value = pendingSearch;
-    }
-  } else {
-    // Load a default page if no search is pending
-    addTab("https://duckduckgo.com");
-  }
-}
-
-// Run the check once the module script has loaded
-checkPendingSearch();
