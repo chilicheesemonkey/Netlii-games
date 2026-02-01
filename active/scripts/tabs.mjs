@@ -261,25 +261,29 @@ if (urlParams.has("inject")) {
     focusTab()
   }, 100);
 }
-/* Add this to the end of tabs.mjs */
+/* --- ADD THIS TO THE BOTTOM OF tabs.mjs --- */
 
-window.addEventListener('load', () => {
+// Function to check for and execute a pending search from home.html
+function checkPendingSearch() {
   const pendingSearch = localStorage.getItem('autoSearchQuery');
 
   if (pendingSearch) {
-    // 1. Clear the memory immediately so it doesn't repeat on refresh
+    // 1. Immediately clear it so it doesn't loop on refresh
     localStorage.removeItem('autoSearchQuery');
 
-    // 2. Use the existing addTab function to open the search
-    // The search() function from prxy.mjs will handle converting the query to a URL
+    // 2. Call the internal addTab function directly
+    // This uses your existing proxy search logic
     addTab(pendingSearch);
 
-    // 3. Optional: Sync the URL bar text
+    // 3. Sync the URL bar text visually
     if (urlInput) {
       urlInput.value = pendingSearch;
     }
   } else {
-    // Default behavior if no search is pending (e.g., open a blank tab)
-    addTab("html.duckduckgo.com/html");
+    // Load a default page if no search is pending
+    addTab("https://duckduckgo.com");
   }
-});
+}
+
+// Run the check once the module script has loaded
+checkPendingSearch();
