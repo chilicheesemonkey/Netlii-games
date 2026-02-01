@@ -261,3 +261,25 @@ if (urlParams.has("inject")) {
     focusTab()
   }, 100);
 }
+/* Add this to the end of tabs.mjs */
+
+window.addEventListener('load', () => {
+  const pendingSearch = localStorage.getItem('autoSearchQuery');
+
+  if (pendingSearch) {
+    // 1. Clear the memory immediately so it doesn't repeat on refresh
+    localStorage.removeItem('autoSearchQuery');
+
+    // 2. Use the existing addTab function to open the search
+    // The search() function from prxy.mjs will handle converting the query to a URL
+    addTab(pendingSearch);
+
+    // 3. Optional: Sync the URL bar text
+    if (urlInput) {
+      urlInput.value = pendingSearch;
+    }
+  } else {
+    // Default behavior if no search is pending (e.g., open a blank tab)
+    addTab("html.duckduckgo.com/html");
+  }
+});
