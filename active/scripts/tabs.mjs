@@ -248,21 +248,19 @@ async function addTab(link) {
   focusTab(tab);
 }
 
-/* --- Replace the bottom of tabs.mjs with this --- */
+  focusTab(tab);
+}
+
+addTab("html.duckduckgo.com/html");
 
 const urlParams = new URLSearchParams(window.location.search);
-const pendingSearch = localStorage.getItem('autoSearchQuery');
 
-if (pendingSearch) {
-  // 1. Clear the storage so it doesn't repeat on refresh
-  localStorage.removeItem('autoSearchQuery');
-  
-  // 2. Immediately trigger the tab with the search query
-  addTab(pendingSearch);
-} else if (urlParams.has("inject")) {
+if (urlParams.has("inject")) {
+  let tab = {};
   const injection = urlParams.get("inject");
-  addTab(injection);
-} else {
-  // Default page if no search is pending
-  addTab("html.duckduckgo.com/html");
+
+  setTimeout(() => {
+    addTab(injection)
+    focusTab()
+  }, 100);
 }
