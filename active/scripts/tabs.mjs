@@ -239,32 +239,16 @@ async function addTab(link) {
       });
     });
   });
-async function handleStartup() {
+addTab("html.duckduckgo.com/html");
 
+const urlParams = new URLSearchParams(window.location.search);
 
+if (urlParams.has("inject")) {
+  let tab = {};
+  const injection = urlParams.get("inject");
 
-  const pendingSearch = localStorage.getItem('autoSearchQuery');
-  const urlParams = new URLSearchParams(window.location.search);
-
-  if (pendingSearch) {
-    // 1. Clear memory so it doesn't loop on refresh
-    localStorage.removeItem('autoSearchQuery');
-
-    // 2. addTab(link) automatically calls search(link) to handle search engines
-    // and getUV(link) to handle the proxying.
-    await addTab(pendingSearch);
-
-    // 3. Ensure the URL bar shows the clean search term
-    if (urlInput) urlInput.value = pendingSearch;
-
-  } else if (urlParams.has("inject")) {
-    const injection = urlParams.get("inject");
-    await addTab(injection);
-  } else {
-    // Default page if no search is pending
-    addTab("html.duckduckgo.com/html");
-  }
+  setTimeout(() => {
+    addTab(injection)
+    focusTab()
+  }, 100);
 }
-
-// Start the check
-handleStartup();
