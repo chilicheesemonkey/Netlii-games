@@ -51,7 +51,7 @@ pageRefresh.onclick = () => {
 };
 
 newTabButton.onclick = () => {
-  addTab("html.duckduckgo.com/html");
+  addTab("https://www.myinstants.com/en/index/us/");
 };
 
 // Options (opt menu)
@@ -133,7 +133,7 @@ const tabItem = (tab) => {
             if (tabs.length) focusTab(tabs[tabs.length - 1]);
             else
               setTimeout(() => {
-                addTab("html.duckduckgo.com/html");
+                addTab("https://www.myinstants.com/en/index/us/");
               }, 100);
           }
 
@@ -246,8 +246,7 @@ async function addTab(link) {
   tabView.appendChild(tab.view);
   focusTab(tab);
 }
-  addTab("html.duckduckgo.com/html?t=h_q=");
-  addTab("html.duckduckgo.com/html");
+  addTab("https://www.myinstants.com/en/index/us/");
 const urlParams = new URLSearchParams(window.location.search);
 
 if (urlParams.has("inject")) {
