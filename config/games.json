@@ -696,6 +696,11 @@
     "imgSrc": "projects/push-your-luck/assets/img/push.png",
     "title": "Push Your Luck"
   },
+   {
+    "link": "projects/racemaster3d/",
+    "imgSrc": "projects/racemaster3d/images.jpg",
+    "title": "Race Master 3D"
+  },
   {
     "link": "projects/rubikscube/",
     "imgSrc": "projects/rubikscube/rubiks.png",
