@@ -13,6 +13,9 @@ Welcome to Netlii, my (second) flagship gaming website. (0K3A being my first)
 ## why me?
 - i am a beginner
 - please support the project (star, fork, make you own link)
+
+## other features
+- it will only work on chromebooks for "security" reasons. (beta)
   
 ## MYOL (make your own link)
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/chilicheesemonkey/netlii-games)
