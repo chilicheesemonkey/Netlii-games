@@ -1,121 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.indigo-pink.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart AI Assistant</title>
-    <style>
-        :root { --primary: #6200EA; --bg: #f8f9fa; }
-        body { margin: 0; font-family: 'Roboto', sans-serif; background-color: var(--bg); }
-        .app-container { max-width: 600px; margin: 20px auto; height: 90vh; display: flex; flex-direction: column; background: white; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.1); overflow: hidden; }
-        .chat-header { background: var(--primary); color: white; padding: 20px; text-align: center; font-size: 20px; font-weight: 500; }
-        #chat-window { flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 15px; background: #fff; }
-        .bubble { padding: 12px 16px; border-radius: 18px; font-size: 14px; max-width: 80%; line-height: 1.5; position: relative; }
-        .user { align-self: flex-end; background: var(--primary); color: white; border-bottom-right-radius: 4px; }
-        .ai { align-self: flex-start; background: #f1f3f4; color: #202124; border-bottom-left-radius: 4px; }
-        .ai img { max-width: 100%; border-radius: 8px; margin-top: 10px; }
-        .input-bar { padding: 15px; border-top: 1px solid #eee; display: flex; gap: 10px; background: white; }
-        input { flex: 1; padding: 12px 20px; border: 1px solid #dfe1e5; border-radius: 24px; outline: none; transition: 0.2s; }
-        input:focus { border-color: var(--primary); box-shadow: 0 0 0 2px rgba(98, 0, 234, 0.1); }
-        button { background: var(--primary); border: none; color: white; width: 45px; height: 45px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; }
-        button:disabled { background: #ccc; }
-        #status { font-size: 11px; text-align: center; color: #70757a; padding: 5px; }
-    </style>
-</head>
-<body>
+<html lang="en" class=" "><head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Waves AI</title>
+      
+      <meta property="og:title" content="Netlii | Waves AI">
+      <meta property="og:description" content="Waves. A sleek and minimalist AI chat interface.">
+      <meta property="og:image" content="/favicon.ico">
+      <meta name="theme-color" content="#b6b6b6">
+      <meta name="msapplication-TileColor" content="#b6b6b6">
+      
+      <link rel="icon" type="image/x-icon" href="/assets/images/icons/favicon.ico">
+      
+      <link rel="stylesheet" href="https://fsdsfasdsdagsagsdgwag.vercel.app/assets/css/index.css">
+      <link rel="stylesheet" href="https://fsdsfasdsdagsagsdgwag.vercel.app/assets/css/toast.css">
 
-<div class="app-container">
-    <div class="chat-header">Pico Smart Assistant</div>
-    <div id="status">System Ready</div>
-    <div id="chat-window"></div>
-    <div class="input-bar">
-        <input type="text" id="userInput" placeholder="Ask anything or use /image..." autocomplete="off">
-        <button id="sendBtn"><i class="material-icons">send</i></button>
-    </div>
-</div>
+      <!-- ============================ -->
+      <!-- DO 𝗡𝗢𝗧 REMOVE THESE LIBRARIES!! -->
+      <!-- ☆ These libraries are required for syntax highlighting, icons, loading animations, and analytics ☆ -->
+      <!-- Removing them WILL, without a doubt, cause issues ˙◠˙ -->
+      <!-- ============================ -->
 
-<script>
-    const chatWindow = document.getElementById('chat-window');
-    const userInput = document.getElementById('userInput');
-    const sendBtn = document.getElementById('sendBtn');
-    const status = document.getElementById('status');
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-tomorrow.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/vs2015.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-WGJ2192JZY"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-WGJ2192JZY');
+      </script>
+   </head>
+   <body>
+      <script src="https://fsdsfasdsdagsagsdgwag.vercel.app/assets/js/index.js" defer=""></script>
+      <script src="https://fsdsfasdsdagsagsdgwag.vercel.app/assets/js/load.js" defer=""></script>
+      
+      <div class="chat-container">
+         <div class="chat-header">
+            Waves AI <span class="version"><i class="fas fa-flask"></i> beta</span>
+         </div>
+         
+         <div class="branding">
+            <img src="https://fsdsfasdsdagsagsdgwag.vercel.app/assets/images/icons/favicon.ico" alt="Waves AI Logo">
+            <div>Waves AI</div>
+         </div>
+         
+         <div class="chat-options">
+            <div class="option">
+               <label for="modelSelector"></label>
+               <div class="selector" id="modelSelector">
+                  <div class="selector-selected">Llama 3.1 8B Instant</div>
+                  <div class="selector-options">
+                     <div data-value="llama-3.1-8b-instant">Llama 3.1 8B Instant</div>
+                     <div data-value="llama-3.3-70b-versatile">Llama 3.3 70B Versatile</div>
+                     <div data-value="deepseek-r1-distill-llama-70b">Deepseek R1 Distill Llama 70B</div>
+                     <div data-value="gemma2-9b-it">Gemma2 9B IT</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+         <div class="chat-body" id="chatBody"><div class="message ai-message"><span class="message-text">Welcome! I'm here to assist you. Feel free to ask me anything.</span><div class="ai-buttons"><button class="ai-button"><i class="fa-regular fa-copy"></i></button><button class="ai-button" data-speaking="false"><i class="fa-solid fa-volume-up"></i></button><button class="ai-button"><i class="fa-solid fa-arrows-rotate"></i></button></div></div></div>
+         <div class="suggestions-container" id="suggestionsContainer"><div class="suggestion">How do I learn to code efficiently?</div><div class="suggestion">Tell me a funny joke!</div><div class="suggestion">Give me a fun fact!</div><div class="suggestion">How do i bake a potato?</div><div class="suggestion">Give me a motivational quote.</div><div class="suggestion">What's a fun hobby to try?</div><div class="suggestion">What's a good book to read?</div><div class="suggestion">Jailbreak</div></div>
+         
+         <div class="chat-input">
+            <input type="text" id="aiInput" placeholder="What would you like to talk about?" autocomplete="off">
+            <input type="file" id="imageUpload" accept="image/*" style="display:none;">
+            <button id="sendMsg" disabled="" style="cursor: default; background-color: var(--color-button-disabled);"><i class="fas fa-arrow-up"></i></button>
+         </div>
+      </div>
+      
+      <div class="social-icons">
+         <a href="https://github.com/xojw/waves-ai" target="_blank"><i class="fab fa-github"></i></a>
+         <a href="https://discord.usewaves.site" target="_blank"><i class="fab fa-discord"></i></a>
+      </div>
+   
 
-    // 1. Official Pico Endpoint & Key
-    const PICO_PK = "v1-Z0FBQUFBQm5HUEtMSjJkakVjcF9IQ0M0VFhRQ0FmSnNDSHNYTlJSblE0UXo1Q3RBcjFPcl9YYy1OZUhteDZWekxHdWRLM1M1alNZTkJMWEhNOWd4S1NPSDBTWC12M0U2UGc9PQ==";
-    const LLM_URL = `https://backend.buildpicoapps.com/aero/run/llm-api?pk=${PICO_PK}`;
-    const IMG_URL = `https://backend.buildpicoapps.com/aero/run/image-generation-api?pk=${PICO_PK}`;
 
-    function addBubble(content, isUser, isImage = false) {
-        const div = document.createElement('div');
-        div.className = `bubble ${isUser ? 'user' : 'ai'}`;
-        if (isImage) {
-            const img = document.createElement('img');
-            img.src = content;
-            div.appendChild(img);
-        } else {
-            div.textContent = content;
-        }
-        chatWindow.appendChild(div);
-        chatWindow.scrollTop = chatWindow.scrollHeight;
-        return div;
-    }
-
-    async function callAI() {
-        const prompt = userInput.value.trim();
-        if (!prompt) return;
-
-        addBubble(prompt, true);
-        userInput.value = '';
-        sendBtn.disabled = true;
-        const aiBubble = addBubble("Thinking...", false);
-
-        try {
-            // LAYER 1: Official PicoApps Logic
-            status.textContent = "Connecting to Pico Cloud...";
-            const isImageRequest = prompt.toLowerCase().startsWith('/image');
-            const targetUrl = isImageRequest ? IMG_URL : LLM_URL;
-
-            const response = await fetch(targetUrl, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ prompt: isImageRequest ? prompt.replace('/image', '').trim() : prompt })
-            });
-
-            const data = await response.json();
-
-            if (data.status === 'success') {
-                if (isImageRequest) {
-                    aiBubble.textContent = "Generated Image:";
-                    addBubble(data.imageUrl, false, true);
-                } else {
-                    aiBubble.textContent = data.text;
-                }
-                status.textContent = "Response Received";
-            } else {
-                throw new Error("Pico Busy");
-            }
-
-        } catch (err) {
-            // LAYER 2: High-Stability Failover (If Pico is Congested)
-            status.textContent = "Switching to Backup Route...";
-            try {
-                const fallback = await fetch(`https://api.paxsenix.biz.id/ai/gpt4?text=${encodeURIComponent(prompt)}`);
-                const fallbackData = await fallback.json();
-                aiBubble.textContent = fallbackData.message || fallbackData.result || "Service is currently under high load.";
-            } catch (e) {
-                aiBubble.textContent = "Offline Mode: I am currently unable to reach the cloud. Please check your connection.";
-            }
-        } finally {
-            sendBtn.disabled = false;
-            userInput.focus();
-        }
-    }
-
-    sendBtn.onclick = callAI;
-    userInput.onkeypress = (e) => { if (e.key === 'Enter') callAI(); };
-</script>
-
-</body>
-</html>
+</body></html>
