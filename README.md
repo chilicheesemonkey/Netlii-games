@@ -1,13 +1,12 @@
 # NETLII
-
-Welcome to Netlii, my (second) flagship gaming website. (0K3A being my first)
-
+/Netlii.png
+Welcome to Netlii, my flagship gaming website.
 
 ## Why to use it?
 - games
 - movies
 - proxy
-- yt
+- yt unblocker
 - AND ITS STATIC!!
   
 ## why me?
