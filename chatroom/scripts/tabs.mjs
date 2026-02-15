@@ -239,6 +239,7 @@ async function addTab(link) {
       });
     });
   });
+
   tabs.push(tab);
 
   tabList.appendChild(tab.item);
@@ -246,8 +247,8 @@ async function addTab(link) {
   tabView.appendChild(tab.view);
   focusTab(tab);
 }
-  addTab("https://tlk.io/netlii");
-}
+
+addTab("https://tlk.io/netlii");
 
 const urlParams = new URLSearchParams(window.location.search);
 
