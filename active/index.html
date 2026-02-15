@@ -242,8 +242,8 @@
       });
       document.addEventListener("click", () => overlay.classList.remove("active"));
     </script>
-    <script>window.addEventListener('load', () => {
-  // Check if there is a pending search from the homepage
+    <script>
+     window.addEventListener('load', () => {
   const pendingSearch = localStorage.getItem('autoSearchQuery');
 
   if (pendingSearch) {
@@ -251,15 +251,18 @@
     const browserForm = document.getElementById('url-form');
 
     if (browserInput && browserForm) {
-      // 1. Fill the browser's URL bar with the text from the homepage
       browserInput.value = pendingSearch;
-
-      // 2. Clear the memory so it doesn't search again if you refresh
       localStorage.removeItem('autoSearchQuery');
 
-      // 3. Automatically trigger the "Go" / "Submit" action
-      browserForm.dispatchEvent(new Event('submit'));
-      browserForm.dispatchEvent(new Event('submit'));
+      // Use a slight delay to ensure tabs.mjs has finished its initial addTab()
+      setTimeout(() => {
+        // requestSubmit() triggers the 'submit' event correctly
+        if (typeof browserForm.requestSubmit === "function") {
+          browserForm.requestSubmit();
+        } else {
+          browserForm.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
+        }
+      }, 200); 
     }
   }
 });
