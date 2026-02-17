@@ -246,30 +246,7 @@ async function addTab(link) {
   tabView.appendChild(tab.view);
   focusTab(tab);
 }
-// Get the query from localStorage
-const pendingSearch = localStorage.getItem('autoSearchQuery');
-
-if (pendingSearch) {
-  localStorage.removeItem('autoSearchQuery');
-
-  // Check if the input is a direct URL or a search query
-  const isUrl = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/.test(pendingSearch);
-  const hasProtocol = /^https?:\/\//i.test(pendingSearch);
-
-  if (hasProtocol) {
-    // 1. If it has http/https, load it exactly as is
-    addTab(pendingSearch);
-  } else if (isUrl) {
-    // 2. If it looks like a URL (e.g., google.com) but lacks protocol, add it
-    addTab("https://" + pendingSearch);
-  } else {
-    // 3. Otherwise, treat it as a DuckDuckGo search
-    addTab("pluto.tv?q=" + encodeURIComponent(pendingSearch));
-  }
-} else {
-  // Default behavior: load the search home
   addTab("pluto.tv?t=h_q=");
-}
 
 const urlParams = new URLSearchParams(window.location.search);
 
