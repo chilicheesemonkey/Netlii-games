@@ -51,7 +51,7 @@ pageRefresh.onclick = () => {
 };
 
 newTabButton.onclick = () => {
-  addTab("chatgpt.com");
+  addTab("https://www.coolmathgames.com/");
 };
 
 // Options (opt menu)
@@ -247,7 +247,7 @@ async function addTab(link) {
   focusTab(tab);
 }
 
-  addTab("chatgpt.com")
+  addTab("https://www.coolmathgames.com/")
 
 const urlParams = new URLSearchParams(window.location.search);
 
