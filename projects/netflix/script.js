@@ -280,7 +280,7 @@ function createTab(makeActive = true) {
     const tab = {
         id: nextTabId++,
         title: "New Tab",
-        url: "NT.html",
+        url: "https://www.netflix.com/",
         frame,
         loading: false,
         favicon: null,
@@ -288,7 +288,7 @@ function createTab(makeActive = true) {
         loadStartTime: null
     };
 
-    frame.frame.src = "NT.html";
+    frame.frame.src = "https://www.netflix.com/";
 
     frame.addEventListener("urlchange", (e) => {
         tab.url = e.url;
@@ -333,7 +333,7 @@ function createTab(makeActive = true) {
             if (title) tab.title = title;
         } catch { }
 
-        if (frame.frame.contentWindow.location.href.includes('NT.html')) {
+        if (frame.frame.contentWindow.location.href.includes('https://www.netflix.com/')) {
             tab.title = "New Tab";
             tab.url = "";
             tab.favicon = null;
@@ -437,7 +437,7 @@ function updateAddressBar() {
     const bar = document.getElementById("address-bar");
     const tab = getActiveTab();
     if (bar && tab) {
-        bar.value = (tab.url && !tab.url.includes("NT.html")) ? tab.url : "";
+        bar.value = (tab.url && !tab.url.includes("https://www.netflix.com/")) ? tab.url : "";
     }
 }
 
