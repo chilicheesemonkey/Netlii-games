@@ -15,7 +15,7 @@
     "title": "ChatGPT"
   },
    {
-    "link": "scramjet/scramjet/https%3A%2F%2Fnetflix.com",
+    "link": "https://netflix.com",
     "imgSrc": "projects/netflix/logo.png",
     "title": "Netflix"
   },
@@ -28,11 +28,6 @@
     "link": "scramjet/",
     "imgSrc": "scramjet/Screenshot 2026-02-18 105915.png",
     "title": "Scramjet Browser"
-  },
-    {
-    "link": "https://y8.com",
-    "imgSrc": "projects/y8games/logo.png",
-    "title": "Y8 Games"
   },
    {
     "link": "projects/1/",
