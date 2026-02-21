@@ -65,6 +65,11 @@
     "title": "Backrooms"
   },
   {
+    "link": "projects/balatro/",
+    "imgSrc": "projects/balatro/balatro.jpg",
+    "title": "Balatro"
+  },
+  {
     "link": "projects/badpiggies/",
     "imgSrc": "projects/badpiggies/Bad_Piggies.png",
     "title": "Bad piggies"
@@ -78,6 +83,11 @@
     "link": "projects/battleforgondor/",
     "imgSrc": "projects/battleforgondor/3557.jpg",
     "title": "Battle for Gondor"
+  },
+   {
+    "link": "projects/btts/",
+    "imgSrc": "projects/btts/images.png",
+    "title": "Big Tower Tiny Square"
   },
    {
     "link": "projects/bitlife/",
@@ -129,11 +139,12 @@
     "imgSrc": "projects/brick-game/images/bg.png",
     "title": "Brick Game"
   },
-  {
-    "link": "projects/btts/",
-    "imgSrc": "projects/btts/images.png",
-    "title": "Big Tower Tiny Square"
+   {
+    "link": "projects/buckshotroulette/",
+    "imgSrc": "projects/buckshotroulette/buckshotroulette.jpg",
+    "title": "Buckshot Roulette"
   },
+  
   {
     "link": "projects/cbt/Coin Blitz Turbo.htm",
     "imgSrc": "projects/cbt/Screenshot 2025-12-23 190811.png",
