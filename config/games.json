@@ -5,6 +5,21 @@
     "title": "Nexus Proxy"
   },
    {
+    "link": "projects/amazonluna/",
+    "imgSrc": "projects/amazonluna/logo.png",
+    "title": "Amazon Luna"
+  },
+   {
+    "link": "projects/chatgpt/",
+    "imgSrc": "projects/chatgpt/images.png",
+    "title": "ChatGPT"
+  },
+   {
+    "link": "projects/y8games/",
+    "imgSrc": "projects/y8games/logo.png",
+    "title": "Y8 Games"
+  },
+   {
     "link": "projects/1/",
     "imgSrc": "projects/1/meta/apple-touch-icon.png",
     "title": "1"
