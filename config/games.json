@@ -20,6 +20,11 @@
     "title": "Y8 Games"
   },
    {
+    "link": "/projects/Nexus-Proxy/embed#https://play.fancade.com",
+    "imgSrc": "projects/fancade/fancade.jpg",
+    "title": "Fancade"
+  },
+   {
     "link": "projects/1/",
     "imgSrc": "projects/1/meta/apple-touch-icon.png",
     "title": "1"
