@@ -6,7 +6,6 @@ const output = (msg, clr) => {
 
 const tcInput = document.getElementById("userinput");
 
-
 const changeTabTitle = () => {
   const tcInput = document.getElementById("userinput");
   if (tcInput.value == "") {
@@ -54,9 +53,6 @@ function applyUrl(url, title) {
   changeTabTitle();
   output("Preset applied successfully!", "green");
 }
-
-
-
 const urlInput = document.getElementById("url-target");
 document.getElementById("create").onclick = function () {
   let userValue = urlInput.value.trim();
