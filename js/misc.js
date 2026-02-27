@@ -54,32 +54,28 @@ function applyUrl(url, title) {
   output("Preset applied successfully!", "green");
 }
 
-const urlInput = document.getElementById("url-target");
+const url = document.getElementById("url-target");
+const urlObj = new window.URL(window.location.href);
 document.getElementById("create").onclick = function () {
-  let userValue = urlInput.value.trim();
-  if (!/^https?:\/\//i.test(userValue)) {
-    userValue = `https://${userValue}`;
+  if (!url.value.startsWith("https://") && !url.value.startsWith("http://")) {
+    url.value = `https://${url.value.split("https://").pop()}`;
+  } else if (url.value.startsWith("http://")) {
+    url.value = `https://${url.value.split("http://").pop()}`;
   }
   const win = window.open();
-  if (!win) {
-    alert("Please allow popups!");
-    return;
-  }
-  const proxyUrl = `${window.location.origin}/projects/Nexus-Proxy/embed#${userValue}`;
-  const d = win.document;
-  d.body.style.margin = "0";
-  d.body.style.overflow = "hidden";
-
-  const iframe = d.createElement("iframe");
-  iframe.style.width = "100vw";
-  iframe.style.height = "100vh";
+  win.document.body.style.margin = "0";
+  win.document.body.style.height = "100vh";
+  const iframe = win.document.createElement("iframe");
   iframe.style.border = "none";
-  iframe.referrerPolicy = "no-referrer";
+  iframe.style.width = "100%";
+  iframe.style.height = "100%";
+  iframe.style.margin = "0";
+  iframe.referrerpolicy = "no-referrer";
   iframe.allow = "fullscreen";
-  iframe.src = proxyUrl;
-
-  d.body.appendChild(iframe);
+  iframe.src = url.value;
+  win.document.body.appendChild(iframe);
 };
+
 var adConsentCheckbox = document.getElementById("adConsent");
 
 adConsentCheckbox.checked = localStorage.getItem("adConsent") === 'true';
