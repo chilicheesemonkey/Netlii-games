@@ -62,26 +62,37 @@ function applyUrl(url, title) {
   output("Preset applied successfully!", "green");
 }
 
-const url = document.getElementById("url-target");
-const urlObj = new window.URL(window.location.href);
+const urlInput = document.getElementById("url-target");
+
 document.getElementById("create").onclick = function () {
-  if (!url.value.startsWith("https://") && !url.value.startsWith("http://")) {
-    url.value = `https://${url.value.split("https://").pop()}`;
-  } else if (url.value.startsWith("http://")) {
-    url.value = `https://${url.value.split("http://").pop()}`;
+  let userValue = urlInput.value.trim();
+
+  // 1. Basic URL cleanup (ensuring a protocol exists for the proxy to handle)
+  if (!/^https?:\/\//i.test(userValue)) {
+    userValue = `https://${userValue}`;
   }
+
+  // 2. Open the new window (about:blank)
   const win = window.open();
-  win.document.body.style.margin = "0";
-  win.document.body.style.height = "100vh";
-  const iframe = win.document.createElement("iframe");
+  if (!win) {
+    alert("Please allow popups!");
+    return;
+  }
+
+  const proxyUrl = `${window.location.origin}/projects/Nexus-Proxy/embed#${userValue}`;
+  const d = win.document;
+  d.body.style.margin = "0";
+  d.body.style.overflow = "hidden";
+
+  const iframe = d.createElement("iframe");
+  iframe.style.width = "100vw";
+  iframe.style.height = "100vh";
   iframe.style.border = "none";
-  iframe.style.width = "100%";
-  iframe.style.height = "100%";
-  iframe.style.margin = "0";
-  iframe.referrerpolicy = "no-referrer";
+  iframe.referrerPolicy = "no-referrer";
   iframe.allow = "fullscreen";
-  iframe.src = url.value;
-  win.document.body.appendChild(iframe);
+  iframe.src = proxyUrl;
+
+  d.body.appendChild(iframe);
 };
 
 var adConsentCheckbox = document.getElementById("adConsent");
