@@ -20,12 +20,20 @@ const changeTabTitle = () => {
 };
 
 const changeTabIcon = () => {
+  // Try to find the icon link, or create one if it doesn't exist
+  let link = document.querySelector("link[rel*='icon']");
+  if (!link) {
+    link = document.createElement('link');
+    link.rel = 'icon';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  }
+
   if (tcInput.value === "") {
-    document.querySelector("link[rel*='icon']").href = "";
+    link.href = "";
     window.localStorage.removeItem("icon");
     output("No image entered. Default applied, refresh to see changes", "red");
   } else if (validURL(tcInput.value)) {
-    document.querySelector("link[rel*='icon']").href = tcInput.value;
+    link.href = tcInput.value;
     window.localStorage.setItem("icon", tcInput.value);
     output("Icon change successful", "green");
   } else {
