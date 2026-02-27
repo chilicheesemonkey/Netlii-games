@@ -20,6 +20,7 @@ const changeTabTitle = () => {
 };
 
 const changeTabIcon = () => {
+  const tcInput = document.getElementById("userinput");
   if (tcInput.value === "") {
     document.querySelector("link[rel*='icon']").href = "";
     window.localStorage.removeItem("icon");
