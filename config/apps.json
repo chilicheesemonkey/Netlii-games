@@ -9,10 +9,42 @@
     "imgSrc": "projects/amazonluna/logo.png",
     "title": "Amazon Luna"
   },
+    {
+    "link": "/projects/Nexus-Proxy/embed#https://discord.gg",
+    "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8aMugg7LWDXqkWc-9JlApM4MLPXhi-EPDYA&s",
+    "title": "Discord"
+  },
+    {
+    "link": "/projects/Nexus-Proxy/embed#https://pluto.tv",
+    "imgSrc": "https://www.jordanharbinger.com/wp-content/uploads/2021/08/pluto-tv.png",
+    "title": "Pluto TV"
+  },
+    {
+    "link": "/projects/Nexus-Proxy/embed#https://www.sling.com/freestream",
+    "imgSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTonFPR5r6VY3mjC5fh5Ya3DFPtfaILCCs4IQ&s",
+    "title": "Sling TV Freestream"
+  }
+   },
+    {
+    "link": "/projects/Nexus-Proxy/embed#https://freefy.app",
+    "imgSrc": "https://play-lh.googleusercontent.com/Fi7laV7yKlxFgUL6rWSmCPigxM68GzHz251hal7B2jZ5jk4tyOAt_HdqrHt3JeVVyw",
+    "title": "Freefy Music"
+  },
    {
     "link": "/projects/Nexus-Proxy/embed#https://chatgpt.com",
     "imgSrc": "projects/chatgpt/images.png",
     "title": "ChatGPT"
+  },
+   
+   {
+    "link": "/projects/Nexus-Proxy/embed#https://github.com",
+    "imgSrc": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/960px-Octicons-mark-github.svg.png?20180806170715",
+    "title": "Github"
+  },
+   {
+    "link": "/projects/Nexus-Proxy/embed#https://paramountplus.com",
+    "imgSrc": "https://assets-prd.ignimgs.com/2022/09/22/service-paramount-plus-1663819407717.jpg",
+    "title": "Paramount Plus"
   },
    {
     "link": "/projects/Nexus-Proxy/embed#https://y8.com",
@@ -31,7 +63,7 @@
   },
    {
     "link": "/projects/Nexus-Proxy/embed#https://disneyplus.com",
-    "imgSrc": "apps/disneyplus.png",
+    "imgSrc": "apps/disneyplus.jpg",
     "title": "Disney Plus"
   },
    {
