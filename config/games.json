@@ -1,5 +1,15 @@
 [
    {
+    "link": "https://drive.google.com/uc?export=download&id=1754Nv4OVesQlqi3Vg9ITqATHsNfiaJsu",
+    "imgSrc": "projects/download.png",
+    "title": "Download Netlii Singlefile"
+  },
+   {
+    "link": "https://drive.google.com/uc?export=download&id=1ZFsrFT2zbp3vmvKrex-LhOS-2dS9VYnY",
+    "imgSrc": "projects/download.png",
+    "title": "Download Netlii Lite"
+  },
+   {
     "link": "projects/1/",
     "imgSrc": "projects/1/meta/apple-touch-icon.png",
     "title": "1"
