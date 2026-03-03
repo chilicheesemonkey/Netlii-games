@@ -722,6 +722,11 @@
     "imgSrc": "projects/racemaster3d/logo.jpg",
     "title": "Race Master 3D"
   },
+   {
+    "link": "projects/racemaster3d/alt",
+    "imgSrc": "projects/racemaster3d/logo.jpg",
+    "title": "Race Master 3D (alt)"
+  },
   {
     "link": "projects/rubikscube/",
     "imgSrc": "projects/rubikscube/rubiks.png",
